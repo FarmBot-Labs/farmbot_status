@@ -1,0 +1,2 @@
+defmodule FarmbotStatus do
+end

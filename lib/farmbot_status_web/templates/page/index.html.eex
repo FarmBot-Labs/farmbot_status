@@ -1,0 +1,31 @@
+<span> <h2> Connected Device status </h2> </span>
+<strong> email </strong>
+<div>
+<%= FarmbotStatus.Config.email %>
+</div>
+<strong> last message: </strong>
+<div id="bot_last_message"> </div>
+<strong> sync status </strong>
+<div id="bot_state_sync_status"> Disconnected </div>
+<strong> firmware status </strong>
+<div id="bot_state_firmware_status"> Unknown </div>
+<strong> firwmare position </strong>
+<div id="bot_state_firmware_position"> unknown, unknown, unknown </div>
+
+<div>
+  <h3> AMQP </h3>
+  <strong> status: </strong>
+  <div id=amqp_status> Unknown </div>
+</div>
+
+<div>
+  <h3> MQTT </h3>
+  <strong> status: </strong>
+  <div id=mqtt_status> Unknown </div>
+</div>
+
+<div>
+  <h3> HTTP </h3>
+  <strong> status: </strong>
+  <div id=http_status> Unknown </div>
+</div>
