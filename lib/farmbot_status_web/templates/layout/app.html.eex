@@ -16,7 +16,7 @@
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
-            <li><a href="https://my.farm.bot">my.farm.bot</a></li>
+            <li><a href="<%= FarmbotStatus.Config.server() %>"> <%= FarmbotStatus.Config.server() %> </a></li>
           </ul>
         </nav>
         <span> <h1> Farmbot Service Status </h1> </span>
