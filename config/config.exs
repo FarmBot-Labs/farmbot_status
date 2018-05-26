@@ -5,10 +5,6 @@
 # is restricted to this project.
 use Mix.Config
 
-# General application configuration
-config :farmbot_status,
-  ecto_repos: [FarmbotStatus.Repo]
-
 # Configures the endpoint
 config :farmbot_status, FarmbotStatusWeb.Endpoint,
   url: [host: "localhost"],

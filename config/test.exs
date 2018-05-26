@@ -8,12 +8,3 @@ config :farmbot_status, FarmbotStatusWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :farmbot_status, FarmbotStatus.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "farmbot_status_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox

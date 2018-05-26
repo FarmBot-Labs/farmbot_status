@@ -8,13 +8,6 @@ config :farmbot_status, FarmbotStatusWeb.Endpoint,
   url: [host: "complicated-impossible-mamenchisaurus.gigalixirapp.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
-config :farmbot_status, FarmbotStatus.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: "${DATABASE_URL}",
-  database: "",
-  ssl: true,
-  pool_size: 1 # Free tier db only allows 1 connection
-
 config :farmbot, :authorization,
   email: "${FARMBOT_EMAIL}",
   password: "${FARMBOT_PASSWORD}",
