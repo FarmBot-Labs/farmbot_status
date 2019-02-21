@@ -1,7 +1,8 @@
 defmodule FarmbotStatusWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :farmbot_status
 
-  socket "/socket", FarmbotStatusWeb.UserSocket
+  socket "/socket", FarmbotStatusWeb.UserSocket,
+    websocket: []
 
   # Serve at "/" the static files from "priv/static" directory.
   #

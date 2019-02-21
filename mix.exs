@@ -1,6 +1,8 @@
 defmodule FarmbotStatus.Mixfile do
   use Mix.Project
   System.put_env("MIX_TARGET", "host")
+  old = System.get_env("CFLAGS")
+  System.put_env("CFLAGS", "#{old} --std=c99")
 
   def project do
     [
@@ -34,25 +36,24 @@ defmodule FarmbotStatus.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:distillery, "~> 1.0"},
-      {:phoenix, "~> 1.3.2"},
-      {:phoenix_pubsub, "~> 1.0"},
-      {:phoenix_html, "~> 2.10"},
-      {:phoenix_live_reload, "~> 1.0", only: :dev},
+      {:distillery, "~> 2.0"},
+      {:phoenix, "~> 1.4"},
+      {:phoenix_pubsub, "~> 1.1"},
+      {:phoenix_html, "~> 2.13"},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0", override: true},
-      {:ranch, "~> 1.4", override: true},
+      {:plug_cowboy, "~> 2.0", override: true},
 
       {:amqp, "~> 1.0"},
+            {:ranch, "1.6.2", override: true},
+{:ranch_proxy_protocol, "~> 2.1", override: true},
       # {:tortoise, "~> 0.1.0"},
       {:gen_mqtt, "~> 0.4.0"},
 
-      {:farmbot, github: "FarmBot/farmbot_os", branch: "deleteme", submodules: true, env: :dev},
-      {:nerves, "~> 1.0"},
-      {:nerves_bootstrap, "~> 1.0", runtime: false},
-      {:gen_stage, "~> 0.13.1"},
-      {:ex_doc, "~> 0.18.3"},
-      {:inch_ex, "~> 0.5.6"}
+      {:farmbot, github: "FarmBot/farmbot_os", tag: "v7.0.1", env: :dev},
+      {:nerves, "~> 1.4"},
+      {:nerves_bootstrap, "~> 1.4", runtime: false},
+      {:gen_stage, "~> 0.14"},
     ]
   end
 
